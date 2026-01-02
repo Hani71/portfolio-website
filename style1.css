@@ -1,0 +1,322 @@
+/* ========== Global Styles ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f0f4ff, #e0f7fa);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ========== Navigation ========== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(76, 175, 80, 0.95);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* ========== Header / Hero ========== */
+header {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    animation: fadeInDown 1s ease forwards;
+}
+
+header p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+header .btn {
+    text-decoration: none;
+    color: white;
+    background: #2E7D32;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+header .btn:hover {
+    transform: translateY(-5px);
+    background: #1B5E20;
+}
+
+/* ========== Sections ========== */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #4CAF50;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #4CAF50;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ========== Skills ========== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.skills li {
+    list-style: none;
+    background: linear-gradient(135deg, #81C784, #4CAF50);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.skills li:hover {
+    transform: scale(1.1);
+}
+
+/* ========== Projects ========== */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(76, 175, 80, 0.1);
+    transform: rotate(25deg);
+    transition: all 0.5s ease;
+}
+
+.project-card:hover::before {
+    top: -20%;
+    left: -20%;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #2E7D32;
+}
+
+.project-card p {
+    margin: 15px 0;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #1B5E20;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.project-card {
+  background: #1e90ff;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin: 10px 5px 0 5px;
+  padding: 8px 12px;
+  background: #ff6347;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #e5533d;
+}
+
+
+/* ========== Contact ========== */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Container for buttons */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Button style */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Gradient colors for different platforms */
+.contact-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.contact-btn.github {
+    background: linear-gradient(45deg, #333, #555);
+}
+
+.contact-btn.linkedin {
+    background: linear-gradient(45deg, #0077B5, #00A0DC);
+}
+
+.contact-btn.whatsapp {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+}
+
+.contact-btn:nth-child(1) { /* Email */
+    background: linear-gradient(45deg, #FF5F6D, #FFC371);
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        padding: 80px 20px;
+    }
+}

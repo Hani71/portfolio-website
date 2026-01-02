@@ -1,0 +1,22 @@
+{
+  "name": "Hani",
+  "bio": "Hi, I’m Hani 👋 A passionate Web Developer building modern, responsive websites.",
+  "skills": ["HTML", "CSS", "JavaScript", "React", "Git & GitHub"],
+  "projects": [
+    {
+      "title": "Project 1",
+      "description": "Website for a local business using HTML, CSS, and JavaScript.",
+      "link": "https://github.com/hani/project1"
+    },
+    {
+      "title": "Project 2",
+      "description": "React web app with interactive components and API integration.",
+      "link": "https://github.com/hani/project2"
+    }
+  ],
+  "contact": {
+    "email": "hani@example.com",
+    "github": "https://github.com/hani",
+    "linkedin": "https://linkedin.com/in/hani"
+  }
+}
